@@ -4,7 +4,7 @@ let nom_boutique = "L'Apothicaire"
 let nombre_potion_de_soin_en_stock = 12
 let prix_potion_de_soin = 5.99
 let status_boutique = "fermer"
-let choix
+let choix,choix2,prix_total,quantité_a_acheter = 1
 let nom_sorcier = "Albus Perceval Wulfric Brian Dumbledore"
 let quantiré_potion_de_soin = 50
 
@@ -40,8 +40,19 @@ switch (choix) {
     }
     case "4": {
         console.log("La quantité d'une potion de soin est: " + quantiré_potion_de_soin + "cl");
+        break;
     }
     default: {
         console.log("Mh... Désolé aventurier, je ne comprends pas ce que tu souhaites. Refais ton choix ! 😕")
+        break;
     }
 }
+choix2 = prompt("quel quantité de potion de soin voulez vous achetter en cl??");
+quantité_voulu = choix2;
+while (choix2 > 50){
+    quantité_a_acheter += 1
+    choix2 -= 50
+}
+prix_total = prix_potion_de_soin*quantité_a_acheter;
+prix_total = Math.round(prix_total * 100) / 100;
+console.log("Prix de " + quantité_voulu + "cl de potions de soins : " + prix_total + " 🪙 car on ne vend que le format 50cl donc vous achetez au total: "+ quantité_a_acheter*50 +"cl mon cher Aventurier. 💸")

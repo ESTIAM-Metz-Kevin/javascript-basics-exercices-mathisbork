@@ -74,3 +74,8 @@ if (argent_sorcier > prix_total && quantité_a_acheter < nombre_potion_de_soin_e
     console.log("felicitation " + nom_sorcier + "vous avez achetez " + quantité_a_acheter*50 +"cl il vous reste " + argent_sorcier + "🪙 mon cher Aventurier !");
 }
 console.log(liste_potion)
+console.log(liste_potion[0])
+console.log(liste_potion[liste_potion.length-1]);
+for (i = 0; i < liste_potion.length; i++){
+    console.log("Nous avons: "+liste_potion[i]+"!");
+}

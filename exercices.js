@@ -10,7 +10,11 @@ let quantiré_potion_de_soin = 50
 let argent_sorcier = 250
 const liste_potion = ["potion soin", "Felix Felicis", "polynectar"]
 const objet_tri = {"nom" : "potion endurence","prix" : 6.70, "quantité stock" : 14}
-
+const inventaire = [
+    {nom: "potion soin", prix: 5.99, quantite: 12},
+    {nom: "Felix Felicis", prix: 54.99, quantite: 3},
+    {nom: "polynectar", prix: 34.99, quantite: 7}
+]
 ///exercice: Affichage conditionnel
 
 if (status_boutique == "ouvet"){
@@ -87,3 +91,4 @@ console.log(liste_potion)
 console.log(objet_tri)
 console.log("le nom est: " + objet_tri.nom)
 console.log("le prix est de: " + objet_tri["prix"])
+console.log(inventaire)

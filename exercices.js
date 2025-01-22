@@ -81,3 +81,5 @@ for (i = 0; i < liste_potion.length; i++){
 }
 liste_potion.push("Veritaserum")
 console.log(liste_potion)
+liste_potion.pop("Veritaserum")
+console.log(liste_potion)

@@ -79,3 +79,5 @@ console.log(liste_potion[liste_potion.length-1]);
 for (i = 0; i < liste_potion.length; i++){
     console.log("Nous avons: "+liste_potion[i]+"!");
 }
+liste_potion.push("Veritaserum")
+console.log(liste_potion)

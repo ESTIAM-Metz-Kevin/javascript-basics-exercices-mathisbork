@@ -9,6 +9,7 @@ const nom_sorcier = "Albus Perceval Wulfric Brian Dumbledore"
 let quantiré_potion_de_soin = 50
 let argent_sorcier = 250
 const liste_potion = ["potion soin", "Felix Felicis", "polynectar"]
+const objet_tri = {"nom" : "potion endurence","prix" : 6.70, "quantité stock" : 14}
 
 ///exercice: Affichage conditionnel
 
@@ -83,3 +84,4 @@ liste_potion.push("Veritaserum")
 console.log(liste_potion)
 liste_potion.pop("Veritaserum")
 console.log(liste_potion)
+console.log(objet_tri)

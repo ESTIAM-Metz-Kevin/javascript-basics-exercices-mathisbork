@@ -2,12 +2,13 @@
 
 let nom_boutique = "L'Apothicaire"
 let nombre_potion_de_soin_en_stock = 12
-let prix_potion_de_soin = 5.99
-let status_boutique = "fermer"
+const prix_potion_de_soin = 5.99
+const status_boutique = "fermer"
 let choix,choix2,prix_total,quantité_a_acheter = 1
 const nom_sorcier = "Albus Perceval Wulfric Brian Dumbledore"
 let quantiré_potion_de_soin = 50
 let argent_sorcier = 250
+const liste_potion = ["potion soin", "Felix Felicis", "polynectar"]
 
 ///exercice: Affichage conditionnel
 
@@ -72,3 +73,4 @@ if (argent_sorcier > prix_total && quantité_a_acheter < nombre_potion_de_soin_e
     nombre_potion_de_soin_en_stock -= quantité_a_acheter;
     console.log("felicitation " + nom_sorcier + "vous avez achetez " + quantité_a_acheter*50 +"cl il vous reste " + argent_sorcier + "🪙 mon cher Aventurier !");
 }
+console.log(liste_potion)

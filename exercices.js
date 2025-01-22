@@ -5,8 +5,9 @@ let nombre_potion_de_soin_en_stock = 12
 let prix_potion_de_soin = 5.99
 let status_boutique = "fermer"
 let choix,choix2,prix_total,quantité_a_acheter = 1
-let nom_sorcier = "Albus Perceval Wulfric Brian Dumbledore"
+const nom_sorcier = "Albus Perceval Wulfric Brian Dumbledore"
 let quantiré_potion_de_soin = 50
+let argent_sorcier = 250
 
 ///exercice: Affichage conditionnel
 
@@ -47,6 +48,7 @@ switch (choix) {
         break;
     }
 }
+///Calcul du prix total d'une commande de potion 🪙
 choix2 = prompt("quel quantité de potion de soin voulez vous achetter en cl??");
 quantité_voulu = choix2;
 while (choix2 > 50){
@@ -56,3 +58,17 @@ while (choix2 > 50){
 prix_total = prix_potion_de_soin*quantité_a_acheter;
 prix_total = Math.round(prix_total * 100) / 100;
 console.log("Prix de " + quantité_voulu + "cl de potions de soins : " + prix_total + " 🪙 car on ne vend que le format 50cl donc vous achetez au total: "+ quantité_a_acheter*50 +"cl mon cher Aventurier. 💸")
+
+///Bourse de l'Aventurier 💰
+
+if(argent_sorcier < prix_total){
+    console.log("⚠️ Attention, il faut que l'aventurier ai assez d'argent pour pouvoir acheter les potions !")
+}
+if(quantité_a_acheter > nombre_potion_de_soin_en_stock){
+    console.log("⚠️ Attention, il faut qu'il y ait assez de potion en stock pour pouvoir acheter les potions !")
+}
+if (argent_sorcier > prix_total && quantité_a_acheter < nombre_potion_de_soin_en_stock){
+    argent_sorcier -= prix_total;
+    nombre_potion_de_soin_en_stock -= quantité_a_acheter;
+    console.log("felicitation " + nom_sorcier + "vous avez achetez " + quantité_a_acheter*50 +"cl il vous reste " + argent_sorcier + "🪙 mon cher Aventurier !");
+}

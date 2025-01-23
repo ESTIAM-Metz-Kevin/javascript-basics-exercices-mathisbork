@@ -17,7 +17,7 @@ const inventaire = [
 ]
 ///exercice: Affichage conditionnel
 
-if (status_boutique == "ouvet"){
+/*if (status_boutique == "ouvet"){
     console.log("bienvenue dans la boutique" + nom_boutique + "aventurier !")
 }
 else if (status_boutique == "fermer"){
@@ -91,4 +91,16 @@ console.log(liste_potion)
 console.log(objet_tri)
 console.log("le nom est: " + objet_tri.nom)
 console.log("le prix est de: " + objet_tri["prix"])
-console.log(inventaire)
+console.log(inventaire)*/
+for (y = 0; y < inventaire.length; y++){
+    console.log("Nom: " + inventaire[y].nom)
+    console.log("Prix: " + inventaire[y].prix)
+    console.log("Stock: " + inventaire[y].quantite)
+}
+for (y = 0; y < inventaire.length; y++){
+    liste_dynamique = Object.entries(inventaire[y]);
+    for (z = 0; z < liste_dynamique.length; z++){
+        a = 0
+        console.log(liste_dynamique[z][a] + ": " + liste_dynamique[z][a+1] + "\n");
+    }
+}
